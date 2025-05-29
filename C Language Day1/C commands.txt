@@ -1,0 +1,212 @@
+01)
+#include<stdio.h>
+int main(){
+        printf("Hello World!\n");
+
+return 0;
+}
+output:
+[Yasho@LAPTOP-JKTQHF95 ~]$ gcc C1.c -o C1
+[Yasho@LAPTOP-JKTQHF95 ~]$ ./C1
+Hello World!
+.............................................
+
+02)
+#include<stdio.h>
+int main(){
+        int age=25;
+        //print(age);
+        printf("%d\n",age);
+        return 0;
+}
+
+
+output:
+[Yasho@LAPTOP-JKTQHF95 ~]$ gcc C2.c -o C2
+[Yasho@LAPTOP-JKTQHF95 ~]$ ./C2
+25
+............................................
+
+03)
+#include<stdio.h>
+int main(){
+        int age=25;
+        printf("%d",age);
+        printf("\nc programming");
+        age=31;
+        printf("\n New age:%d",age);
+        return 0;
+}
+
+output:
+[Yasho@LAPTOP-JKTQHF95 ~]$ ./C3
+25
+c programming
+..........................................
+
+04)
+#include<stdio.h>
+int main(){
+        int num1=25;
+        printf("First Number:%d\n",num1);
+        int num2=num1;
+        printf("\nSecond Number:%d\n",num2);
+        return 0;
+}
+
+output:
+[Yasho@LAPTOP-JKTQHF95 ~]$ gcc C4.c -o C4
+[Yasho@LAPTOP-JKTQHF95 ~]$ ./C4
+First Number:25
+
+Second Number:25
+.............................................
+
+05)
+#include<stdio.h>
+int main(){
+        int num1,num2=25;
+        printf("First Number:%d",num1);
+        printf("\nSecond Number:%d",num2);
+        return 0;
+}
+
+output:
+[Yasho@LAPTOP-JKTQHF95 ~]$ gcc C5.c -o C5
+[Yasho@LAPTOP-JKTQHF95 ~]$ ./C5
+First Number:-2024727704
+Second Number:25
+...............................................
+
+06)
+#include<stdio.h>
+int main(){
+        int age=10;
+        printf("%d",age);
+        printf("\nsize:%zu",sizeof(age));
+        return 0;
+}
+output:
+
+[Yasho@LAPTOP-JKTQHF95 ~]$ ./C6
+10
+size:4
+..............................................
+
+07)
+#include<stdio.h>
+int main(){
+        int num1=10;
+        double num2=12.45;
+        printf("Integer Number:%d",num1);
+        printf("\nDouble Number:%.lf",num2);
+        printf("\nDouble Number:%.2lf",num2);
+
+        float num3=10.9f;
+        printf("\nFloat Number:%f",num3);
+        printf("\nFloat Number:%.1f",num3);
+
+        char character='N';
+        printf("\nCharacter:%c",character);
+        printf("\nCharacter:%d",character);  //characters are internally stores as integers
+        return 0;
+}
+
+output:
+[Yasho@LAPTOP-JKTQHF95 ~]$ gcc C7.c -o C7
+[Yasho@LAPTOP-JKTQHF95 ~]$ ./C7
+Integer Number:10
+Double Number:12
+Double Number:12.45
+Float Number:10.900000
+Float Number:10.9
+Character:N
+Character:78
+..........................................................
+
+
+08)
+#include<stdio.h>
+int main(){
+        int age;
+        printf("Enter your age:");
+        scanf("%d", &age);  // &-->ampasan
+        printf("Age:%d",age);
+
+        double num;
+        printf("\nEnter your number:");
+        scanf("%lf", &num);
+        printf("Double Number:%lf",num);
+
+        float num2;
+        printf("\nEnter your float number:");
+        scanf("%f", &num2);
+        printf("Double Number:%f",num2);
+
+        char character;
+        printf("\nEnter your character:");
+        scanf(" %c", &character);
+        printf("Character:%c",character);
+
+        //multiple inputs together
+        double num3;
+        char alpha;
+        printf("\nEnter inputs:");
+        scanf("%lf %c", &num3,&alpha);
+
+        return 0;
+}
+
+output:
+
+[Yasho@LAPTOP-JKTQHF95 ~]$ gcc C8.c -o C8
+[Yasho@LAPTOP-JKTQHF95 ~]$ vi C8.c
+[Yasho@LAPTOP-JKTQHF95 ~]$ ./C8
+Enter your age:24
+Age:24
+Enter your number:3
+Double Number:3.000000
+Enter your float number:4.5
+Double Number:4.500000
+Enter your character:y
+Character:y
+Enter inputs:hii
+................................................
+
+09)
+#include<stdio.h>
+int main(){
+        int num1;
+        printf("Enter your number 1:");
+        scanf("%d", &num1);
+
+        int num2;
+        printf("Enter your number 2:");
+        scanf("%d", &num2);
+
+        int sum=num1+num2;
+        int sub=num1-num2;
+        int mul=num1*num2;
+        double div=num1/num2;
+        int rem=num1%num2;
+
+        printf("\nSummation:%d",sum);
+        printf("\nSubtraction:%d",sub);
+        printf("\nMultiplication:%d",mul);
+        printf("\nDivision:%lf",div);
+        printf("\nRemainder:%d",rem);
+
+        return 0;
+}
+
+output:
+[Yasho@LAPTOP-JKTQHF95 ~]$ gcc C9.c -o C9
+[Yasho@LAPTOP-JKTQHF95 ~]$ ./C9
+Enter your number 1:5
+Enter your number 2:4
+
+Summation:9
+Subtraction:1
+Multiplication:20
+Division:1.000000
+Remainder:1
