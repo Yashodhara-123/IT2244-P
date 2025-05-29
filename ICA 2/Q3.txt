@@ -1,0 +1,34 @@
+
+vi answer3.sh
+
+echo "Enter the first word:"
+read word1
+echo "Enter the second word:"
+read word2
+len1=${#word1}
+len2=${#word2}
+if [ "$len1" -gt "$len2" ]; 
+then
+echo "$word1 is larger than $word2"
+else
+echo "$word2 is larger than $word1"
+fi
+
+chmod 777 Q3.sh
+./Q3.sh
+
+
+::
+read -p "Enter string_1: " str1
+read -p "Enter string_2: " str2
+
+len1=${#str1}
+len2=${#str2}
+
+if [ "$len1" -gt "$len2" ]; then
+echo "The longer string is: $str1"
+elif [ "$len2" -gt "$len1" ]; then
+echo "The longer string is: $str2"
+else
+echo "Both lengths are equal"
+fi
