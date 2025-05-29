@@ -1,0 +1,54 @@
+Question:Get the user input for three numbers (a,b,c).Calculate the LCM(Least Common Multiple) for first two numbers(a,b) 
+and calculate the GCD(Greatest Common Divisor) for last two numbers(b,c).
+
+echo "Enter the first number:"
+read a
+echo "Enter the second number:"
+read b
+echo "Enter the third number:"
+read c
+
+x=$a
+y=$b
+
+
+if [ $x -gt $y ]; then
+          lcm=$x
+  else
+            lcm=$y
+fi
+
+while true; do
+if [ $((lcm % x)) -eq 0 ] && [ $((lcm % y)) -eq 0 ]; then
+
+echo "LCM of $x and $y is: $lcm"
+break
+fi
+
+lcm=$((lcm + 1))
+done
+
+x=$b
+y=$c
+
+while [ $y -ne 0 ]; do
+temp=$y
+y=$((x%y))
+x=$temp
+done
+
+echo "GCD of $b and $c is:$x"
+
+output:
+
+[Yasho@LAPTOP-JKTQHF95 ~]$ vi quiz.sh
+[Yasho@LAPTOP-JKTQHF95 ~]$ chmod 777 quiz.sh
+[Yasho@LAPTOP-JKTQHF95 ~]$ ./quiz.sh
+Enter the first number:
+3
+Enter the second number:
+4
+Enter the third number:
+6
+LCM of 3 and 4 is: 12
+GCD of 4 and 6 is:2
