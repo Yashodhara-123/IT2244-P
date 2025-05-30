@@ -1,0 +1,103 @@
+//fork
+
+#include<stdio.h>
+#include<unistd.h>
+
+int main(){
+	printf("\Hello World");
+	int f=fork();
+	int p=getpid();
+	
+	printf("\n the pid is %d",p);
+	printf("\n the fork is %d",f);
+	
+	return 0;
+}
+
+==========================================================
+#include<stdio.h>
+#include<unistd.h>
+
+int main(){
+	
+	int f=fork();
+	if(f==0)
+	{
+		printf("I am Parent Process\n");
+	}
+	else
+	{
+		printf("I am Child process\n");
+	}
+	
+	
+	return 0;
+}
+
+=============================================================
+
+#include<stdio.h>
+#include<unistd.h>
+
+int main(){
+	
+	int f=fork();
+	int f1=fork();
+	if(f==0)
+	{
+		printf("I am Child C \n");
+	
+		if(f1==0)
+		{
+			printf("I am Sibling\n");
+		}
+		else
+		{
+			printf("I am Parent\n");
+		}
+	
+	}
+	return 0;
+}
+
+============================================================
+#include<stdio.h>
+#include<unistd.h>
+
+int main(){
+	
+	int f=fork();
+	int f1=fork();
+	
+	if(){
+		p=getpid();
+		
+		printf("I'm Child\n");
+		printf("My ParentID %d\n",getppid());
+	}
+	else{
+		int f2=fork();
+		if(f2==0){
+			printf("I'm child\n");
+			printf("My parent ID %d\n",getpid());
+		}
+		else{
+			int f1=fork();
+			if(f1 == 0)
+			{
+				printf("I'm Sibling\n");
+				printf("My parent ID %d\n",getppid());
+			}
+			else{
+				printf("I am a (A)Parent.I have two children (B) and (C)\n");
+				printf("My(parent) ID is %d\n",get);
+			}
+			
+			
+		}
+	}
+	
+	
+	
+	return 0;
+}
